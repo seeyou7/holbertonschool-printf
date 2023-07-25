@@ -37,3 +37,16 @@ int print_string(va_list args)
 	return (i);
 
 }
+
+/**
+ * print_percent - func to print the char "%"
+ * @args: list of variadic argument
+ *
+ * return: char "%"
+ */
+
+int print_percent(va_list args)
+{
+	(void)args;
+	return(write(1, "%", 1));
+}
