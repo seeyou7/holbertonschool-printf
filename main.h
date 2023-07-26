@@ -9,6 +9,11 @@
 #include <string.h>
 #include <limits.h>
 
+typedef struct types
+{
+	char *p;
+	int (*f)(va_list);
+} print_f;
 
 
 int _printf(const char *format, ...);
@@ -23,4 +28,4 @@ int (*get_func(const char *format))(va_list);
 
 
 
-#endif
+#endif /*_MAIN_H_*/
