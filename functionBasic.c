@@ -5,7 +5,8 @@
  * @args: va_list args
  *
  *Return: 1
- */
+ *
+  */
 
 int print_char(va_list args)
 {
@@ -20,7 +21,6 @@ int print_char(va_list args)
  *
  * Return: string
  */
-
 int print_string(va_list args)
 {
 	int i;
@@ -45,7 +45,6 @@ int print_string(va_list args)
  *
  * Return: 1
  */
-
 int print_percent(va_list args)
 {
 	(void)args;
@@ -59,7 +58,6 @@ int print_percent(va_list args)
  * @args: list of variadic arguments
  * Return: length of string
  */
-
 int print_number(va_list args)
 {
 	long int n;
@@ -82,6 +80,6 @@ int print_number(va_list args)
 		n %= div;
 		div /= 10;
 	}
-	return (len);
+	return ( len);
 
 }
