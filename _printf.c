@@ -1,4 +1,4 @@
-#include "main.h"
+#include :wq"main.h"
 
 /**
  *_printf - prints to output according to format
@@ -9,44 +9,43 @@
 
 int _printf(const char *format, ...)
 {
-        int j = 0, count = 0;
-        int (*f)(va_list);
-        va_list args;
+	int y = 0, count = 0;
+	int (*f)(va_list);
+	va_list args;
 
-        va_start(args, format);
-        if (format == NULL || !format[j + 1])
-                return (-1);
+	va_start(args, format);
+	if (format == NULL || !format[y + 1])
+		return (-1);
 
-        while (format[j])
-        {
-                if (format[j] == '%')
-                {
-                if (format[j + 1])
-                {
-                if (format[j + 1] != 'c' && format[j + 1] != 's'
-                && format[j + 1] != '%' && format[j + 1] != 'd'
-                && format[j + 1] != 'i')
-        {
-                count += _putchar(format[j]);
-                count += _putchar(format[j + 1]);
-                j++;
-        }
-        else
-        {
-                f = get_func(&format[j + 1]);
-                count += f(args);
-                j++;
-        }
-        }
-        }
-        else
-        {
-        _putchar(format[j]);
-        count++;
-        }
-        j++;
-        }
-        va_end(args);
-        return (count);
+	while (format[y])
+	{
+		if (format[y] == '%')
+		{
+		if (format[y + 1])
+		{
+		if format[y + 1] != 'c' && format[i + 1] != 's'
+		&& format[y + 1] != '%' && format[i + 1] != 'd'
+		&& format[y + 1] != 'i')
+	{
+		count += _putchar(format[y]);
+		count += _putchar(format[y + 1]);
+		y++;
+	}
+	else
+	{
+		f = get_func(&format[y + 1]);
+		count += f(args);
+		y++;
+	}
+	}
+	}
+	else
+	{
+	_putchar(format[y]);
+	count++;
+	}
+	y++;
+	}
+	va_end(args);
+	return (count);
 }
-
