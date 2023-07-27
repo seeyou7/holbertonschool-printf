@@ -80,6 +80,6 @@ int print_number(va_list args)
 		n %= div;
 		div /= 10;
 	}
-	return ( len);
+	return (len);
 
 }
