@@ -2,9 +2,9 @@
 
 /**
  * print_char - funct to print a single char
- * @args: list of variadic arg to be printed 
+ * @args: list of variadic arg to be printed
  *
- *return: the numberof char printed
+ *return: the numberof char printedtchar c
  */
 
 int print_char(va_list args)
@@ -18,9 +18,8 @@ int print_char(va_list args)
  * print_string - funtion that print string
  * @args: va_list contanting string to be printed
  *
- * Return: string 
+ * Return: string
  */
-
 int print_string(va_list args)
 {
 	int i;
@@ -44,21 +43,20 @@ int print_string(va_list args)
  *
  * return: char "%"
  */
-
 int print_percent(va_list args)
 {
 	(void)args;
-	return(write(1, "%", 1));
+
+	return (write(1, "%", 1));
 }
 
 
 /**
  * print_number - print integer
  *
- * @ap: list of variadic arguments
+ * @args: list of variadic arguments
  * Return: length of string
  */
-
 int print_number(va_list args)
 {
 	long int n;
