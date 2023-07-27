@@ -1,49 +1,52 @@
 #include "main.h"
+
 /**
- * _printf - prints output according to a format.
- * @format: character string.
- * Return: number of characters printed.
+ *_printf - prints to output according to format
+ *@format: character string
+ *
+ *Return: number of characters printed
  */
+
 int _printf(const char *format, ...)
 {
-	va_list args;
-	int (*printer)(va_list);
-	int count = 0;
+        int j = 0, count = 0;
+        int (*f)(va_list);
+        va_list args;
 
-	if (format == NULL)
-		return (-1);
-	va_start(args, format);
-	while (*format)
-	{
-		if (*format == '%')
-		{
-			format++;
-			printer = get_func(format);
-			if (printer == NULL)
-			{
-				if (*format == '\0')
-					return (-1);
-				if (*format == '!')
-				{
-					count += _putchar('!');
-					format++;
-					continue;
-				}
-				count += _putchar('%');
-			}
-			else
-			{
-				count += printer(args);
-				format++;
-				continue;
-			}
-		}
-		else
-		{
-			count += _putchar(*format);
-		}
-		format++;
-	}
-	va_end(args);
-	return (count);
+        va_start(args, format);
+        if (format == NULL || !format[j + 1])
+                return (-1);
+
+        while (format[j])
+        {
+                if (format[j] == '%')
+                {
+                if (format[j + 1])
+                {
+                if (format[j + 1] != 'c' && format[j + 1] != 's'
+                && format[j + 1] != '%' && format[j + 1] != 'd'
+                && format[j + 1] != 'i')
+        {
+                count += _putchar(format[j]);
+                count += _putchar(format[j + 1]);
+                j++;
+        }
+        else
+        {
+                f = get_func(&format[j + 1]);
+                count += f(args);
+                j++;
+        }
+        }
+        }
+        else
+        {
+        _putchar(format[j]);
+        count++;
+        }
+        j++;
+        }
+        va_end(args);
+        return (count);
 }
+
