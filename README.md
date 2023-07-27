@@ -35,23 +35,28 @@ Return value is the amount of chars printed (program successfully), see this tab
 
 File Functions
 
-File:
+File :
 	                               
 main.h:	Header file Include all function prototypes
 Include structure of specifiers
 
-_printf.C:
+_printf.c :
 
 Project function: _printf
-Start the variadic list.Iterates string format of entry and check for a module symbol (%). If the symbol is found then check ifthe next char match with one of the valid specifiers in the structure using the auxiliar function to compare ( get_func), in that case the respective function of these format is called.
-For the characters that doesn't match any of the formats the function ignores the module symbole and print it as a string. In case that the module symbole is not found, print the each character normally.
 
-functionsbis.c:
+Start the variadic list.
+Iterates string format of entry and check for a module symbol (%). If the symbol is found then check ifthe next char match with one of the valid specifiers in the structure using the auxiliarfunction to compare ( get_func), in that case the respective function of these format is called.
+For the characters that doesn't match any of the formats the function ignores the module symbole and print it as a string.
+In case that the module symbole is not found, print the each character normally.
+
+functionBasic.c :
 
 Auxiliar functions
+
 print_char: print character using list variable.
 print_string: pint strings, if string is null it pirnts (null)
-print_decimal: print decimal numbers base.
+print_percent: func to print the char %
+print_number: print integer numbers base.
 
 Tasks
 
@@ -60,13 +65,19 @@ These are all the tasks of this project, the ones that are completed link to the
 0-I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life
 
 -Write a function that produces output according to a format.
+
  c : converts input into a character
+
  s : converts input into a string
+ 
+ % : converts a percent into character
 
 1-Education is when you read the fine print. Experience is what you get if you don't
 
 -Handle the following conversion specifiers:
+
  d : converts input into a base 10 integer
+
  i : converts input into an integer
 
 2-Just because it's in print doesn't mean it's the gospel
