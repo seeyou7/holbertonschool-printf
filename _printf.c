@@ -1,4 +1,4 @@
-#include :wq"main.h"
+#include "main.h"
 
 /**
  *_printf - prints to output according to format
@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 		{
 		if (format[y + 1])
 		{
-		if format[y + 1] != 'c' && format[y + 1] != 's'
+		if (format[y + 1] != 'c' && format[y + 1] != 's'
 		&& format[y + 1] != '%' && format[y + 1] != 'd'
 		&& format[y + 1] != 'i')
 	{
