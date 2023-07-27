@@ -1,0 +1,32 @@
+.\"manpage _printf
+.\"
+.TH man 3 "27 July 2023" "Holberton School" "_printf man page"
+.SH NAME
+.B _printf
+- A simple re-creation of the printf function.
+.SH SYNOPSIS
+To use this function, include the "main.h" header.
+.SH DESCRIPTION
+The \fB_printf()\fP function produces output according to a format which is described below. This function writes its output to the stdout, the standard output stream.
+.SH USAGE
+To use \fB_printf\fP, you have to use the following format specifiers preceded by the % symbol.
+.RS 3
+.TP
+\fB%c:\fP
+To be used to print characters.
+.TP
+\fB%s:\fP
+To be used to print strings.
+.TP
+\fB%d:\fP
+To print integers with the maximum and minimum size of an int type.
+.RE
+.SH RETURN VALUES
+The \fB_printf()\fP function returns an integer representing the number of symbols printed, not counting the null terminator for the string.
+.SH SEE ALSO
+.I printf(3)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Younes SABER//
+Saima RIAZ.
