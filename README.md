@@ -61,7 +61,7 @@ Create a man page for your function
 
 
 
-![FLOWCHART](https://zupimages.net/viewer.php?id=23/30/pbpa.png)
+![FLOWCHART](https://zupimages.net/up/23/30/pbpa.png)
 
 
 
