@@ -23,8 +23,8 @@ int _printf(const char *format, ...)
 		{
 		if (format[y + 1])
 		{
-		if format[y + 1] != 'c' && format[i + 1] != 's'
-		&& format[y + 1] != '%' && format[i + 1] != 'd'
+		if format[y + 1] != 'c' && format[y + 1] != 's'
+		&& format[y + 1] != '%' && format[y + 1] != 'd'
 		&& format[y + 1] != 'i')
 	{
 		count += _putchar(format[y]);
